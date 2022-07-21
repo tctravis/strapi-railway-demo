@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recruitment_charts",
+  "info": {
+    "singularName": "recruitment-chart",
+    "pluralName": "recruitment-charts",
+    "displayName": "Recruitment chart",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "chartTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "study": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::study.study",
+      "inversedBy": "recruitment_charts"
+    }
+  }
+}

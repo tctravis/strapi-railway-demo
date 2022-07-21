@@ -4,15 +4,39 @@
   "info": {
     "singularName": "study",
     "pluralName": "studies",
-    "displayName": "Study"
+    "displayName": "Study",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "studyTitle": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "recruitment_charts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recruitment-chart.recruitment-chart",
+      "mappedBy": "study"
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
